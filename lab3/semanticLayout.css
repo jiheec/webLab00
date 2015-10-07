@@ -12,14 +12,14 @@ body {
 
 }
 
-* *:hover:not(aside):not(header):not(article):not(section) {
+* *:hover:not(article):not(section):not(aside):not(header){
 	background-color: #ffff00;
 }
 
-
+/*
 body:hover {
 	background-color: white;
-}
+}*/
 
 
 aside {
@@ -30,6 +30,8 @@ aside {
 
 	border-radius: 15px;
 	border:solid 4px #1D2475;
+
+	margin-top: 10px;
 
 	
 }

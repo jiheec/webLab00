@@ -31,6 +31,8 @@ body:hover {
 	border-radius: 15px;
 	border:solid 4px #1D2475;
 
+	margin-top: 10px;
+
 	
 }
 
@@ -73,11 +75,11 @@ h1 {
 #whoami {
 	background-color: #8E8E8E;
 	margin-bottom: 10px;
+	overflow:hidden;
 
 }
 
 #contents {
-
 	overflow: hidden;
 }
 
