@@ -1,0 +1,10 @@
+create database timeline;
+use timeline;
+
+CREATE TABLE tweets (
+	no Integer primary key auto_increment  NOT NULL,
+	author varchar(20)  NOT NULL,
+	contents text  NOT NULL,
+	time datetime NOT NULL
+);
+
