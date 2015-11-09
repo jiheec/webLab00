@@ -2,11 +2,10 @@
 # Ex 5 : Delete a tweet
 try {
 	include("timeline.php");
-
-	//$hidden = $_POST["hid"];
-
 	$tl = new TimeLine();
-   // $tl -> delete($hidden);
+
+	$getno = isset($_POST["no"]) ? $_POST["no"] : ' ';
+	$tl -> delete($getno);
     
     header("Location:index.php");
     

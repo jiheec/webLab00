@@ -10,8 +10,6 @@
             <a href="index.php"><h1>Simple Timeline</h1></a>
             <div class="search">
                 <!-- Ex 3: Modify forms -->
-
-
                 <form method="GET" class="search-form">
                     <input type="submit" value="search">
                     <input type="text" name="srchcontent" placeholder="Search">
@@ -24,19 +22,14 @@
                 <?php
                 	include("timeline.php");
                 	$tl = new TimeLine();
-
-                	if (!empty($_GET["srch"]) && !empty($_GET["srchcontent"])){
-                		//echo $_POST["srch"] . "---";
-                		//echo $_POST["srchcontent"];
-                		$tl -> searchTweets($_GET["srch"], $_GET["srchcontent"]);
-                	}
-
-           			
+                	$getsrch = isset($_GET["srch"]) ? $_GET["srch"] : ' ';
+                    $getsrchcontent = isset($_GET["srchcontent"]) ? $_GET["srchcontent"] : ' ';
+                    
+                	$tl -> searchTweets($getsrch, $getsrchcontent);
+                	
                 ?>
-
-
-
             </div>
+
             <div class="panel">
             	
                 <div class="panel-heading">
