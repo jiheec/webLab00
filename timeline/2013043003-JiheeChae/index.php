@@ -18,16 +18,6 @@
                         <option>Content</option>
                     </select>
                 </form>
-
-                <?php
-                	include("timeline.php");
-                	$tl = new TimeLine();
-                	$getsrch = isset($_GET["srch"]) ? $_GET["srch"] : ' ';
-                    $getsrchcontent = isset($_GET["srchcontent"]) ? $_GET["srchcontent"] : ' ';
-                    
-                	$tl -> searchTweets($getsrch, $getsrchcontent);
-                	
-                ?>
             </div>
 
             <div class="panel">
@@ -45,11 +35,24 @@
                 </div>
                 <!-- Ex 3: Modify forms & Load tweets -->
                 <?php
-                	/*include("timeline.php");
-                	$tl = new TimeLine();*/
-           			$tl -> loadTweets();
+                	
+                	include("timeline.php");
+                	$tl = new TimeLine();
+
+                	
+                	if(isset($_GET["srchcontent"])){
+                		$getsrch = isset($_GET["srch"]) ? $_GET["srch"] : ' ';
+	                    $getsrchcontent = isset($_GET["srchcontent"]) ? $_GET["srchcontent"] : ' ';
+	                    
+	                	$tl -> searchTweets($getsrch, $getsrchcontent);
+                	}
+                	
+                	else {
+                		$tl -> loadTweets();
+                	}
+                	
                 ?>
-                
+                <!--
                 <div class="tweet">
                     <form class="delete-form">
                         <input type="submit" value="delete">
@@ -127,7 +130,7 @@
                     <div class="tweet-content">
                         Nevermind I'll find someone like you
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </body>

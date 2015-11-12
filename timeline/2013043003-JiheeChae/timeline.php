@@ -50,7 +50,7 @@
                         
                         foreach($conts as $cont){
                             $subs = substr($cont,1);
-                            echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=$subs&srch=Content'>$cont</a>", $cont)." ";
+                            echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=%23$subs&srch=Content'>$cont</a>", $cont)." ";
                         }
                         
                         ?>
@@ -95,7 +95,7 @@
                                 
                                 foreach($conts as $cont){
                                     $subs = substr($cont,1);
-                                    echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=$subs&srch=Content'>$cont</a>", $cont)." ";
+                                    echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=%23$subs&srch=Content'>$cont</a>", $cont)." ";
                                 }
                                 
                                 ?>
@@ -128,7 +128,7 @@
                                 
                                 foreach($conts as $cont){
                                     $subs = substr($cont,1);
-                                    echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=$subs&srch=Content'>$cont</a>", $cont)." ";
+                                    echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=%23$subs&srch=Content'>$cont</a>", $cont)." ";
                                 }
                                 
                                 ?>
@@ -161,7 +161,7 @@
                             
                             foreach($conts as $cont){
                                 $subs = substr($cont,1);
-                                echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=$subs&srch=Content'>$cont</a>", $cont)." ";
+                                echo preg_replace("/^#\S+/", "<a href='index.php?srchcontent=%23$subs&srch=Content'>$cont</a>", $cont)." ";
                             }
                             
                             ?>
