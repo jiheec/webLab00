@@ -78,9 +78,15 @@ function showToSelect(){
 	for(var i=0 ; i < numberOfBlocks ; i++){
 
 		blocknormal[i].observe("click", function(){
-			//blocknormal[i].addClassName("clicked");
+			var blocknormal = $$(".block");
+			
 			console.log(this);
-			$(this).addClassName("clicked");
+			//this.addClassName("clicked");
+
+			var num = this.getAttribute("data-index");
+
+			console.log(num);
+			blocknormal[num].addClassName("selected");
 		});
 	}
 
